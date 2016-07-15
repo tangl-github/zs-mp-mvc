@@ -5,7 +5,7 @@
         path = require('path'),
         del = require('del'),
         merge = require('merge-stream');
-    //加载gulp-load-plugins插件，并马上运行它
+    //加载gulp-load-plugins插件，并马上运行它，可以使用package.json中依赖列表的gulp-插件
     var plugins = require('gulp-load-plugins')();
 
     var baseRoot = 'src/main/webapp/',
@@ -30,7 +30,7 @@
                 paths.source.scripts + 'module/**/*.js'
             ],
             libFile:[
-                paths.source.scripts + 'lib/**/*.js'
+                paths.source.scripts + 'lib/**/*'
             ]
         };
 
@@ -92,9 +92,21 @@
             .pipe(gulp.dest(paths.dist.scripts));//输出
 
         // 发布主文件
-        var s3 = gulp.src(paths.source.scripts + 'main.js')
+        var s3 = gulp.src([paths.source.scripts + '*.js',paths.source.scripts + 'demo/*.js'],{base:paths.source.scripts})
             .pipe(gulp.dest(paths.dist.scripts)); //输出
         return merge(s1,s2,s3);
+    });
+
+    /**
+     * 定义任务：生成map文件
+     */
+    gulp.task('map', function () {
+        //生成新的版本路径并替换引用文件
+        return gulp.src(paths.source.scripts + 'lib/**/*.min.js')
+            //.pipe(plugins.rename({extname:'.min'}))//重命名
+            .pipe(plugins.sourcemaps.init())
+            .pipe(plugins.sourcemaps.write('./'))
+            .pipe(gulp.dest(paths.source.scripts + 'lib'));//输出
     });
 
 

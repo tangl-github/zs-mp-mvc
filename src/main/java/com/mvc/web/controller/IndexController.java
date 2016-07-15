@@ -17,4 +17,27 @@ public class IndexController extends BaseController{
 		log.info("进入主页");
 		return "index";
 	}
+
+	@RequestMapping(value = "class01.shtml")
+	public String demo01() {
+		log.info("class01");
+		return "demo/class01";
+	}
+
+	@RequestMapping(value = "class02.shtml")
+	public String demo02() {
+		return "demo/class02";
+	}
+	@RequestMapping(value = "class03.shtml")
+	public String demo03() {
+		return "demo/class03";
+	}
+	@RequestMapping(value = "class04.shtml")
+	public String demo04() {
+		return "demo/class04";
+	}
+	@RequestMapping(value = "class05.shtml")
+	public String demo05() {
+		return "demo/class05";
+	}
 }

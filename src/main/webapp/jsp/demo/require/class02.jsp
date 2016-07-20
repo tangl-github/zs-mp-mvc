@@ -20,7 +20,7 @@
     <div class="result-body"></div>
 </div>
 </body>
-<script type="text/javascript" src="${ctx}/source/js/demo/demo.js"></script>
+<script type="text/javascript" src="${ctx}/source/js/demo/require/demo.js"></script>
 <script>
     new listController($('#content'),'plan1');
     new listController($('#content2'),'plan2',{

@@ -5,7 +5,7 @@
     <%@ include file="/dist/libs/metalibs.jsp"%>
     <%@ include file="/dist/libs/csslibs.jsp"%>
     <%@ include file="/dist/libs/jslibs.jsp"%>
-    <script  data-main="/dist/js/demo/in3" src="${ctx}/dist/js/lib/require/require.min.js"></script>
+    <script  data-main="/source/js/demo/require/in2" src="${ctx}/dist/js/lib/require/require.min.js"></script>
     <title>mvc</title>
 </head>
 <body>

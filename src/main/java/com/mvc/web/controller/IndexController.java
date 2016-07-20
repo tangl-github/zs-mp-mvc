@@ -21,23 +21,33 @@ public class IndexController extends BaseController{
 	@RequestMapping(value = "class01.shtml")
 	public String demo01() {
 		log.info("class01");
-		return "demo/class01";
+		return "demo/require/class01";
 	}
 
 	@RequestMapping(value = "class02.shtml")
 	public String demo02() {
-		return "demo/class02";
+		return "demo/require/class02";
 	}
 	@RequestMapping(value = "class03.shtml")
 	public String demo03() {
-		return "demo/class03";
+		return "demo/require/class03";
 	}
 	@RequestMapping(value = "class04.shtml")
 	public String demo04() {
-		return "demo/class04";
+		return "demo/require/class04";
 	}
 	@RequestMapping(value = "class05.shtml")
 	public String demo05() {
-		return "demo/class05";
+		return "demo/require/class05";
+	}
+	@RequestMapping(value = "class06.shtml")
+	public String demo06() {
+		return "demo/require/class06";
+	}
+
+
+	@RequestMapping(value = "sea01.shtml")
+	public String sea01() {
+		return "demo/sea/sea01";
 	}
 }

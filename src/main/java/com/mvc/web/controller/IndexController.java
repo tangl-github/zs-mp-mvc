@@ -18,36 +18,21 @@ public class IndexController extends BaseController{
 		return "index";
 	}
 
-	@RequestMapping(value = "class01.shtml")
-	public String demo01() {
-		log.info("class01");
-		return "demo/require/class01";
+	@RequestMapping(value = "class.shtml")
+	public String demo(String page) {
+		if(page == null)page = "01";
+		return "demo/require/class" + page;
 	}
 
-	@RequestMapping(value = "class02.shtml")
-	public String demo02() {
-		return "demo/require/class02";
-	}
-	@RequestMapping(value = "class03.shtml")
-	public String demo03() {
-		return "demo/require/class03";
-	}
-	@RequestMapping(value = "class04.shtml")
-	public String demo04() {
-		return "demo/require/class04";
-	}
-	@RequestMapping(value = "class05.shtml")
-	public String demo05() {
-		return "demo/require/class05";
-	}
-	@RequestMapping(value = "class06.shtml")
-	public String demo06() {
-		return "demo/require/class06";
+	@RequestMapping(value = "sea.shtml")
+	public String sea(String page) {
+		if(page == null)page = "01";
+		return "demo/sea/sea" + page;
 	}
 
-
-	@RequestMapping(value = "sea01.shtml")
-	public String sea01() {
-		return "demo/sea/sea01";
+	@RequestMapping(value = "ember.shtml")
+	public String ember(String page) {
+		if(page == null)page = "01";
+		return "demo/ember/ember" + page;
 	}
 }

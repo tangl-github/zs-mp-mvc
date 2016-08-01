@@ -5,6 +5,9 @@
 define(function(require, exports, module) {
     console.log("run main.js");
 
+    var tp = require("text!/templates/about.hbs");
+    console.log("tp:" + tp);
+
     // 通过 exports 对外提供接口
     exports.doSomething = function () {
         console.log("main doSomething");

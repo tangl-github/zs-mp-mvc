@@ -4,6 +4,7 @@
 <head>
     <%@ include file="/dist/libs/metalibs.jsp"%>
     <script type="text/javascript" src="/source/js/lib/seajs/sea.min.js"></script>
+    <script type="text/javascript" src="/source/js/lib/seajs/plugins/seajs-text.js"></script>
     <script type="text/javascript" src="/source/js/demo/sea/config.js"></script>
     <title>sea</title>
 </head>
